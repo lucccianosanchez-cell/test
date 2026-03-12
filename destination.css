@@ -40,11 +40,14 @@ body {
   justify-content: center;
   margin: 12px 0;
 }
-.search-bar input {
+.header-search input,
+.search-bar input,
+.hero-search-wrapper input {
   width: 100%;
-  max-width: 420px;
-  padding: 8px 14px;
-  border-radius: 25px;
+  max-width: 700px;
+  min-width: 320px;
+  padding: 12px 18px;
+  border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.85);
   background: rgba(255, 255, 255, 0.12);
   color: white;
@@ -61,7 +64,63 @@ body {
   display: flex;
   gap: 15px;
   margin-bottom: 15px;
+  align-items: center;
 }
+.theme-switch {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid white;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+  margin-left: auto;
+}
+.theme-switch:hover {
+  background-color: white;
+  color: #00bcd4;
+}
+
+body.dark {
+  background-color: #050b1a;
+  color: #f0f4ff;
+}
+body.dark .container {
+  background-color: #050b1a;
+}
+body.dark .header,
+body.dark .footer {
+  background-color: #082038;
+}
+body.dark .header-top,
+body.dark .search-bar,
+body.dark .nav-menu,
+body.dark .footer-section,
+body.dark .destination-card,
+body.dark .page-title {
+  color: #f0f4ff;
+}
+body.dark .btn-outline,
+body.dark .btn-primary,
+body.dark .theme-switch {
+  border-color: #c0d8ff;
+  color: #c0d8ff;
+}
+body.dark .btn-outline:hover,
+body.dark .btn-primary:hover,
+body.dark .theme-switch:hover {
+  background-color: #c0d8ff;
+  color: #00304f;
+}
+body.dark .search-bar input,
+body.dark .header-search input,
+body.dark .hero-search-wrapper input {
+  background: rgba(255, 255, 255, 0.14);
+  color: #f0f4ff;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
 .btn-outline {
   background-color: transparent;
   border: 2px solid white;
