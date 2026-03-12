@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jahriso Voyages - Support</title>
+    <link rel="stylesheet" href="contact.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="brand">
+          <a href="acceuil.html"><h1>Jahriso Voyages</h1></a>
+        </div>
+        <div class="header-top">
+          <div class="header-search">
+            <input type="search" placeholder="Rechercher une destination..." aria-label="Rechercher" />
+          </div>
+          <nav class="nav-links">
+            <a href="acceuil.html" class="btn-outline">Accueil</a>
+            <a href="offres.html" class="btn-outline">Nos Offres</a>
+            <a href="destination.html" class="btn-outline">Destination</a>
+            <a href="contact.html" class="btn-outline">Contact</a>
+          </nav>
+          <button id="themeToggle" class="theme-switch">Mode Sombre</button>
+        </div>
+        <nav class="nav-menu">
+          <span>DESTINATIONS</span>
+          <span>INSPIRATIONS</span>
+          <span>SÉJOURS</span>
+          <span>PARCS D'ATTRACTIONS</span>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <section class="hero-section">
+          <div class="hero-image">
+            <img src="https://images.pexels.com/photos/1287460/pexels-photo-1287460.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Support" />
+          </div>
+          <div class="destinations-preview">
+            <h2 class="title">Besoin d'aide ? Nous sommes là pour vous !</h2>
+            <p style="color:white; margin-bottom: 24px; max-width: 700px; text-align:center;">Sélectionnez un thème pour accéder aux réponses rapides, ou posez directement votre question.</p>
+            <div class="hero-search-wrapper" style="margin-top:0;">
+              <input type="search" placeholder="Consultez toutes les questions et réponses fréquentes" />
+            </div>
+          </div>
+        </section>
+
+        <div class="help-grid" style="margin-top: 24px;">
+          <article>Assistance accessible pour les clients en situation de handicap</article>
+          <article>Compte et confidentialité des données</article>
+          <article>Paiement, frais, factures et cartes-cadeaux</article>
+          <article>Autres sujets et anglais</article>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-section">
+          <h3>Info</h3>
+          <ul>
+            <li><a href="#">A propos de Jahriso</a></li>
+            <li><a href="#">Carrière</a></li>
+            <li><a href="#">Jahriso airlines</a></li>
+            <li><a href="#">Jahriso Productions</a></li>
+            <li><a href="#">Entreprise</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Télécharger l'Application</h3>
+          <ul>
+            <li><a href="#">Application iOS</a></li>
+            <li><a href="#">Application Android</a></li>
+            <li><a href="#">Enregistrement</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Valeur</h3>
+          <ul>
+            <li><a href="#">Accessibilité</a></li>
+            <li><a href="#">Confidentialité en ligne</a></li>
+            <li><a href="#">Environnement</a></li>
+          </ul>
+          <div class="language-flags">
+            <img src="https://flagcdn.com/w40/gb.png" alt="English" />
+            <img src="https://flagcdn.com/w40/cn.png" alt="中文" />
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Connexion</h3>
+          <div class="payment-icons">
+            <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" />
+            <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="MasterCard" />
+            <img src="https://img.icons8.com/color/48/000000/paypal.png" alt="PayPal" />
+          </div>
+          <ul>
+            <li><a href="#">Application iOS</a></li>
+            <li><a href="#">Application Androide</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
