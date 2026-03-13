@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jahriso Voyages - Destinations</title>
+<link href="destination.css" rel="stylesheet"/>
+<script defer="" src="script.js"></script>
+
+<style>
+.theme-switch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 9em;
+  height: 2.5em;
+  font-size: 20px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  color: black;
+  background-color: #E0F0FF;
+  padding: 0.5em;
+  border: 1px solid black;
+  box-shadow: 6px 6px 0px black;
+  transition: .4s;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-switch .name::before {
+  color: black;
+  content: "Dark Mode";
+  margin-right: 2em;
+  transition: .2s ease-in-out;
+}
+
+.theme-switch .name::after {
+  color: black;
+  content: "Light Mode";
+  margin-right: 1.7em;
+  transition: .2s ease-in-out;
+  display: none;
+}
+
+.theme-switch .slider {
+  position: absolute;
+  background-color: #222;
+  margin-left: 6.2em;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 4px solid #222;
+  transform: rotate(-120deg);
+  box-shadow: inset 0px 6px #999, inset 0px 6px 1px 1px #999;
+}
+
+.theme-switch:hover {
+  color: white;
+  cursor: pointer;
+  box-shadow: none;
+  transform: translateX(6px) translateY(6px);
+  background-color: black;
+  border: none;
+}
+
+.theme-switch:hover .name::before {
+  color: white;
+}
+
+.theme-switch:hover .name::after {
+  color: white;
+}
+
+.theme-switch input[type=checkbox]:checked + .slider {
+  transform: rotate(360deg);
+  box-shadow: none;
+  border: 4px solid #F28C38;
+  background-color: #F28C38;
+}
+
+.theme-switch input[type=checkbox]:checked ~ .name::before {
+  display: none;
+}
+
+.theme-switch input[type=checkbox]:checked ~ .name::after {
+  display: block;
+}
+
+.theme-switch input[type=checkbox] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.slider {
+  transition: 300ms ease;
+}
+
+</style></head>
+<body>
+<div class="loader" id="loader">Chargement...</div>
+<div class="container">
+<header class="header">
+      <a href="destination.html" class="back-button">← Retour</a>
+<div class="header-top">
+<div class="brand">
+<a href="acceuil.html"><h1>Jahriso Voyages</h1></a>
+</div>
+<div class="header-search">
+<input aria-label="Rechercher" placeholder="Rechercher une destination..." type="search"/>
+</div>
+<div class="header-actions">
+<nav class="nav-links">
+<a class="btn-outline" href="acceuil.html">Accueil</a>
+<a class="btn-outline" href="destination.html">Destination</a>
+<a class="btn-outline" href="offres.html">Nos Offres</a>
+<a class="btn-outline" href="contact.html">Contact</a>
+</nav>
+
+<label class="theme-switch" for="checkbox" id="themeswitch">
+<input id="checkbox" type="checkbox"/>
+<div class="slider round"></div>
+<span class="name"></span>
+<div class="back"></div>
+</label>
+
+</div>
+</div>
+<nav class="nav-menu">
+<a href="destination.html"><span>DESTINATIONS POPULAIRES</span></a>
+<a href="avis.html"><span>AVIS CLIENTS</span></a>
+<a href="sejours.html"><span>SÉJOURS</span></a>
+<a href="parcs.html"><span>PARCS D'ATTRACTIONS</span></a>
+</nav>
+</header>
+<main class="main-content">
+<h2 class="page-title">offres de voyages</h2>
+<aside class="destination-theme reveal">
+<div class="theme-header">
+<h2>Inspiration « Destination »</h2>
+<p>Choisissez votre prochaine aventure avec ces séjours thématiques sélectionnés spécialement pour vous.</p>
+</div>
+<div class="theme-grid">
+<article class="theme-card">
+<h3>Aventure Écotouristique</h3>
+<p>Trekking, observation animalière et immersion locale dans des parcs préservés.</p></article>
+<article class="theme-card">
+<h3>Voyage Bien-Être</h3>
+<p>Séjours spa, yoga et sérénité pour récupérer et se ressourcer complètement.</p></article>
+<article class="theme-card">
+<h3>Culture &amp; Gastronomie</h3>
+<p>Expériences culinaires authentiques et visites de lieux historiques majeurs.</p></article>
+</div>
+</aside>
+<div class="destinations-grid">
+<article class="destination-card" data-href="dubai.html">
+<div class="card-image">
+<img alt="Dubai" src="https://images.pexels.com/photos/325193/pexels-photo-325193.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600"/>
+</div>
+<div class="card-content">
+<h3>Dubai</h3>
+<p>Découvrez le luxe et la modernité de Dubai, ses gratte-ciels impressionnants et ses souks traditionnels.</p></div>
+</article>
+<article class="destination-card" data-href="tunisie.html">
+<div class="card-image">
+<img alt="Tunisie" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/1630969/pexels-photo-1630969.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600'" src="https://th.bing.com/th/id/OIP.TFAQ2PnPDmpI7Q56eD1APQHaE7?w=283&amp;h=189&amp;c=7&amp;r=0&amp;o=7&amp;pid=1.7&amp;rm=3"/>
+</div>
+<div class="card-content">
+<h3>Tunisie</h3>
+<p>Explorez la beauté méditerranéenne de la Tunisie, entre plages dorées et sites archéologiques.</p></div>
+</article>
+<article class="destination-card" data-href="maldives.html">
+<div class="card-image">
+<img alt="Maldives" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/799443/pexels-photo-799443.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600'" src="https://th.bing.com/th/id/OIP.AhrLyfSnvsJxPgPbf4FX7gHaEK?w=367&amp;h=180&amp;c=7&amp;r=0&amp;o=7&amp;pid=1.7&amp;rm=3"/>
+</div>
+<div class="card-content">
+<h3>Maldives</h3>
+<p>Paradis tropical avec eaux cristallines et plages de sable blanc immaculé.</p></div>
+</article>
+<article class="destination-card" data-href="maroc.html">
+<div class="card-image">
+<img alt="Maroc" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600'" src="https://th.bing.com/th/id/OIP.-TOcsmLbJty1smtRY8tiuwHaE8?w=282&amp;h=188&amp;c=7&amp;r=0&amp;o=7&amp;pid=1.7&amp;rm=3"/>
+</div>
+<div class="card-content">
+<h3>Maroc</h3>
+<p>Vivez la magie du Maroc entre médinas colorées, déserts et montagnes de l'Atlas.</p></div>
+</article>
+<article class="destination-card" data-href="turquie.html">
+<div class="card-image">
+<img alt="Turquie" src="https://images.pexels.com/photos/2422461/pexels-photo-2422461.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600"/>
+</div>
+<div class="card-content">
+<h3>Turquie</h3>
+<p>Découvrez le pont entre l'Orient et l'Occident, riche en histoire et culture.</p></div>
+</article>
+<article class="destination-card" data-href="eygipte.html">
+<div class="card-image">
+<img alt="Egypte" src="https://images.pexels.com/photos/1388030/pexels-photo-1388030.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600"/>
+</div>
+<div class="card-content">
+<h3>Egypte</h3>
+<p>Plongez dans l'histoire ancienne avec les pyramides et les trésors du Nil.</p></div>
+</article>
+<article class="destination-card" data-href="bali.html">
+<div class="card-image">
+<img alt="Bali" src="https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600"/>
+</div>
+<div class="card-content">
+<h3>Bali</h3>
+<p>Profitez des rizières en terrasses, plages de sable fin et temples mystiques.</p></div>
+</article>
+<article class="destination-card" data-href="japon.html">
+<div class="card-image">
+<img alt="Japon" onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400.png?text=Image+indisponible'" src="https://www.en-vols.com/wp-content/uploads/afmm/2023/09/GettyImages-1192780580_Paysages_Japon_MED.jpg"/>
+</div>
+<div class="card-content">
+<h3>Japon</h3>
+<p>Explorez Tokyo futuriste et les traditions zen de Kyoto avec un guide expert.</p></div>
+</article>
+<article class="destination-card" data-href="amsterdam.html">
+<div class="card-image">
+<img alt="Amsterdam" onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400.png?text=Image+indisponible'" src="https://cdn.audleytravel.com/4861/3472/79/15985267-amsterdam-canal-in-the-autumn.jpg"/>
+</div>
+<div class="card-content">
+<h3>Amsterdam</h3>
+<p>Balade en vélo et canaux historiques dans une ambiance européenne élégante.</p></div>
+</article>
+<article class="destination-card" data-href="newyork.html">
+<div class="card-image">
+<img alt="New York" onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400.png?text=Image+indisponible'" src="http://www.pixelstalk.net/wp-content/uploads/2016/05/New-York-City-Skyline-HD-Wallpaper.jpg"/>
+</div>
+<div class="card-content">
+<h3>New York</h3>
+<p>Immersion urbaine dans la ville qui ne dort jamais : Broadway, skyline et quartiers branchés.</p></div>
+</article>
+<article class="destination-card" data-href="grèce.html">
+<div class="card-image">
+<img alt="Grèce" src="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600"/>
+</div>
+<div class="card-content">
+<h3>Grèce</h3>
+<p>Détente sur les îles grecques avec une cuisine méditerranéenne et un coucher de soleil doré.</p></div>
+</article>
+<article class="destination-card" data-href="islande.html">
+<div class="card-image">
+<img alt="Islande" src="https://th.bing.com/th/id/R.f6ea4c8bce8f5c9d23d6f73fe1c5cf10?rik=5rZIrBnG1lOw3Q&amp;riu=http%3a%2f%2fwww.planetcustodian.com%2fwp-content%2fuploads%2f2015%2f09%2fIceland-landscape-photography-15.jpg&amp;ehk=fHd556Es46IR1KMdWI9MhYzUgkwFDc8JrURmrlnyBbg%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0"/>
+</div>
+<div class="card-content">
+<h3>Islande</h3>
+<p>Aventures volcaniques, sources chaudes et aurores boréales dans un paysage lunaire.</p></div>
+</article>
+<article class="destination-card" data-href="alger.html">
+<div class="card-image">
+<img alt="Alger" src="https://tse2.mm.bing.net/th/id/OIP.7l2Y6Lz4ArjF4cNxnkUB8gAAAA?pid=ImgDet&amp;w=204&amp;h=204&amp;c=7&amp;o=7&amp;rm=3"/>
+</div>
+<div class="card-content">
+<h3>Alger</h3>
+<p>Explorer Alger avec ses ruelles, sa baie splendide et son patrimoine méditerranéen authentique.</p></div>
+</article>
+<article class="destination-card" data-href="canada.html">
+<div class="card-image">
+<img alt="Canada" src="https://th.bing.com/th/id/OIP.wwCYbr0vi9mWKdRvt51qBQHaE8?w=259&amp;h=180&amp;c=7&amp;r=0&amp;o=7&amp;pid=1.7&amp;rm=3"/>
+</div>
+<div class="card-content">
+<h3>Canada</h3>
+<p>Grandioses parcs nationaux, lacs turquoise et nature sauvage à couper le souffle.</p></div>
+</article>
+<article class="destination-card" data-href="bresil.html">
+<div class="card-image">
+<img alt="Brésil" src="data:image/webp;base64,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"/>
+</div>
+<div class="card-content">
+<h3>Brésil</h3>
+<p>Ambiance festive à Rio, forêts tropicales et plages exotiques pour un voyage intense.</p>
+</div>
+</article>
+</div>
+</main>
+<footer class="footer">
+<div class="footer-section">
+<h3>Info</h3>
+<ul>
+<li><a href="histoire.html">A propos de Jahviss</a></li>
+<li><a href="histoire.html">Jahviss Actus</a></li>
+<li><a href="histoire.html">Tour de passe oublier</a></li>
+<li><a href="histoire.html">Enregistrement</a></li>
+<li><a href="histoire.html">Compagnies</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>Télécharger l'Application</h3>
+<ul>
+<li><a href="https://play.google.com/">Application</a></li>
+<li><a href="https://play.google.com/">Mot de passe oublier</a></li>
+<li><a href="https://play.google.com/">Enregistrement</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>Valeur</h3>
+<ul>
+<li><a href="#">Accessibilité</a></li>
+<li><a href="#">Enregistrement</a></li>
+</ul>
+<div class="language-flags">
+<img alt="English" src="https://flagcdn.com/w40/gb.png"/>
+<img alt="中文" src="https://flagcdn.com/w40/cn.png"/>
+</div>
+</div>
+<div class="footer-section">
+<h3>Connexion</h3>
+<div class="payment-icons">
+<img alt="Visa" src="https://img.icons8.com/color/48/000000/visa.png"/>
+<img alt="MasterCard" src="https://img.icons8.com/color/48/000000/mastercard.png"/>
+<img alt="PayPal" src="https://img.icons8.com/color/48/000000/paypal.png"/>
+</div>
+<ul>
+<li><a href="#">Application en ligne</a></li>
+<li><a href="#">Application Androide</a></li>
+</ul>
+<div class="social-icon">
+<a class="facebook-icon" href="#">f</a>
+</div>
+</div>
+</footer>
+<div class="footer-credits">
+<p>© 2026 Jahriso Voyages</p>
+<p>Contact : <a href="mailto:jariobensalah706@gmail.com">jariobensalah706@gmail.com</a></p>
+<p><a href="https://www.instagram.com/" rel="noopener" target="_blank">Instagram</a> | <a href="https://twitter.com/" rel="noopener" target="_blank">Twitter</a> | <a href="https://www.facebook.com/" rel="noopener" target="_blank">Facebook</a></p>
+</div>
+</div>
+<button aria-label="Retour en haut" class="scroll-top" id="scrollToTopBtn">↑</button>
+<section class="reveal">
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.destination-card[data-href]').forEach(function(card) {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', function() {
+      window.location.href = card.getAttribute('data-href');
+    });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background-color: #00bcd4;
+}
+
+.header {
+  background-color: #00bcd4;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 14px 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.brand h1 {
+  color: white;
+  font-size: 20px;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.nav-links .btn-outline {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.nav-links .btn-outline:hover {
+  background-color: white;
+  color: #00bcd4;
+}
+
+.hero-section {
+  background: url('https://images.pexels.com/photos/4578826/pexels-photo-4578826.jpeg?auto=compress&cs=tinysrgb&w=1200') center/cover no-repeat;
+  color: white;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero-content {
+  max-width: 780px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.6);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 680px;
+  margin: 0 auto 1.4rem;
+  color: #ffffff;
+}
+
+.cta {
+  background: #ff7e00;
+  color: #fff;
+  padding: 0.85rem 1.6rem;
+  border: none;
+  border-radius: 22px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.cta:hover {
+  background: #ff9c33;
+}
+
+section {
+  padding: 3rem 1.5rem;
+  background: #f9f9f9;
+  color: #222;
+}
+
+section h2 { font-size: 2.3rem; margin-bottom: 0.75rem; }
+
+section p { max-width: 720px; margin: 0 auto 1.5rem; font-size: 1.05rem; color: #333; }
+
+.destinations {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.card {
+  width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: #fff;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 1rem 1rem 0.5rem;
+}
+
+.card p {
+  padding: 0 1rem 1rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.card .btn-primary {
+  display: inline-block;
+  margin: 0 1rem 1rem;
+  padding: 0.6rem 1rem;
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card .btn-primary:hover {
+  background-color: #008fa8;
+  transform: translateY(-2px);
+}
+
+.card .btn-primary:focus-visible {
+  outline: 2px solid rgba(255,255,255,0.9);
+  outline-offset: 2px;
+}
+
+footer {
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 2rem;
+}
+    header h1 {
+      font-size: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+    header p {
+      font-size: 1.5rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+    .cta {
+      background: #ff7e00;
+      color: #fff;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .cta:hover {
+      background: #ff9c33;
+    }
+    section {
+      padding: 4rem 2rem;
+      background: #f9f9f9;
+      color: #222;
+      text-align: center;
+    }
+    section h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+    section p { max-width: 700px; margin: 0 auto 2rem; font-size: 1.1rem; }
+    .destinations {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .card {
+      width: 300px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      background: #fff;
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: scale(1.05); }
+    .card img { width: 100%; height: 200px; object-fit: cover; }
+    .card h3 { margin: 1rem 0 0.5rem; }
+    .card p { padding: 0 1rem 1rem; font-size: 1rem; color: #555; }
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 2rem;
+    }

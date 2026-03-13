@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jahriso Voyages - Pourquoi nous</title>
+<link href="offres.css" rel="stylesheet"/>
+<script defer="" src="script.js"></script>
+
+<style>
+.theme-switch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 9em;
+  height: 2.5em;
+  font-size: 20px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  color: black;
+  background-color: #E0F0FF;
+  padding: 0.5em;
+  border: 1px solid black;
+  box-shadow: 6px 6px 0px black;
+  transition: .4s;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-switch .name::before {
+  color: black;
+  content: "Dark Mode";
+  margin-right: 2em;
+  transition: .2s ease-in-out;
+}
+
+.theme-switch .name::after {
+  color: black;
+  content: "Light Mode";
+  margin-right: 1.7em;
+  transition: .2s ease-in-out;
+  display: none;
+}
+
+.theme-switch .slider {
+  position: absolute;
+  background-color: #222;
+  margin-left: 6.2em;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 4px solid #222;
+  transform: rotate(-120deg);
+  box-shadow: inset 0px 6px #999, inset 0px 6px 1px 1px #999;
+}
+
+.theme-switch:hover {
+  color: white;
+  cursor: pointer;
+  box-shadow: none;
+  transform: translateX(6px) translateY(6px);
+  background-color: black;
+  border: none;
+}
+
+.theme-switch:hover .name::before {
+  color: white;
+}
+
+.theme-switch:hover .name::after {
+  color: white;
+}
+
+.theme-switch input[type=checkbox]:checked + .slider {
+  transform: rotate(360deg);
+  box-shadow: none;
+  border: 4px solid #F28C38;
+  background-color: #F28C38;
+}
+
+.theme-switch input[type=checkbox]:checked ~ .name::before {
+  display: none;
+}
+
+.theme-switch input[type=checkbox]:checked ~ .name::after {
+  display: block;
+}
+
+.theme-switch input[type=checkbox] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.slider {
+  transition: 300ms ease;
+}
+
+</style></head>
+<body>
+<div class="loader" id="loader">Chargement...</div>
+<div class="container">
+<header class="header">
+      <a href="destination.html" class="back-button">← Retour</a>
+<div class="header-top">
+<div class="brand">
+<a href="acceuil.html"><h1>Jahriso Voyages</h1></a>
+</div>
+<div class="header-search">
+<input aria-label="Rechercher" placeholder="Rechercher une destination..." type="search"/>
+</div>
+<div class="header-actions">
+<nav class="nav-links">
+<a class="btn-outline" href="acceuil.html">Accueil</a>
+<a class="btn-outline" href="destination.html">Destination</a>
+<a class="btn-outline" href="offres.html">Nos Offres</a>
+<a class="btn-outline" href="contact.html">Contact</a>
+</nav>
+
+<label class="theme-switch" for="checkbox" id="themeswitch">
+<input id="checkbox" type="checkbox"/>
+<div class="slider round"></div>
+<span class="name"></span>
+<div class="back"></div>
+</label>
+
+</div>
+</div>
+<nav class="nav-menu">
+<a href="destination.html"><span>DESTINATIONS POPULAIRES</span></a>
+<a href="avis.html"><span>AVIS CLIENTS</span></a>
+<a href="sejours.html"><span>SÉJOURS</span></a>
+<a href="parcs.html"><span>PARCS D'ATTRACTIONS</span></a>
+</nav>
+</header>
+<main class="hero-section">
+<h2 class="hero-title">Pourquoi nous et personne d'autre ?</h2>
+<p class="hero-subtitle">car ici on c'est plus simple, le moins cher et on correspond a vos attendees</p>
+<div class="search-section">
+<p class="search-label">vers ou comptez vous vous rendre ?</p>
+<div class="search-input-wrapper">
+<span class="search-icon-large">🔍</span>
+<input placeholder="villes, pays, rêves" type="text"/>
+</div>
+</div>
+</main>
+<footer class="footer">
+<div class="footer-section">
+<h3>Info</h3>
+<ul>
+<li><a href="histoire.html">A propos de Jahriso</a></li>
+<li><a href="histoire.html">Carrière</a></li>
+<li><a href="histoire.html">Jahriso airlines</a></li>
+<li><a href="histoire.html">Jahriso Productions</a></li>
+<li><a href="histoire.html">Entreprise</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>Télécharger l'Application</h3>
+<ul>
+<li><a href="https://play.google.com/">application</a></li>
+<li><a href="https://play.google.com/">mot de passe oublier</a></li>
+<li><a href="https://play.google.com/">Environnement</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>Valeur</h3>
+<ul>
+<li><a href="#">Accessibilité</a></li>
+<li><a href="#">Confidentialité en ligne</a></li>
+<li><a href="#">Environnement</a></li>
+</ul>
+<div class="language-flags">
+<img alt="English" src="https://flagcdn.com/w40/gb.png"/>
+<img alt="中文" src="https://flagcdn.com/w40/cn.png"/>
+</div>
+</div>
+<div class="footer-section">
+<h3>Connexion</h3>
+<div class="payment-icons">
+<img alt="Visa" src="https://img.icons8.com/color/48/000000/visa.png"/>
+<img alt="MasterCard" src="https://img.icons8.com/color/48/000000/mastercard.png"/>
+<img alt="PayPal" src="https://img.icons8.com/color/48/000000/paypal.png"/>
+</div>
+<ul>
+<li><a href="#">Application iOS</a></li>
+<li><a href="#">Application Androide</a></li>
+</ul>
+</div>
+</footer>
+<div class="footer-credits">
+<p>© 2026 Jahriso Voyages</p>
+<p>Contact : <a href="mailto:jariobensalah706@gmail.com">jariobensalah706@gmail.com</a></p>
+<p><a href="https://www.instagram.com/" rel="noopener" target="_blank">Instagram</a> | <a href="https://twitter.com/" rel="noopener" target="_blank">Twitter</a> | <a href="https://www.facebook.com/" rel="noopener" target="_blank">Facebook</a></p>
+</div>
+</div>
+<button aria-label="Retour en haut" class="scroll-top" id="scrollToTopBtn">↑</button>
+</body>
+</html>

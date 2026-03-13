@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avis des voyageurs - Jahriso</title>
+  <link rel="stylesheet" href="avis.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="header">
+      <a href="destination.html" class="back-button">← Retour</a>
+    <div class="brand">
+      <h1><a href="acceuil.html">Jahriso Voyages</a></h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Avis des voyageurs</h1>
+        <p>Parce que votre confiance est notre meilleure récompense.</p>
+      </div>
+    </section>
+
+    <section class="reviews-section">
+      <div class="section-header">
+        <h2>Commentaires</h2>
+        <p>Les retours récents de notre communauté.</p>
+      </div>
+      <div id="reviews" class="reviews-grid"></div>
+    </section>
+
+    <section class="form-section">
+      <div class="section-header">
+        <h2>Laisser un avis</h2>
+        <p>Partagez votre expérience pour aider d'autres voyageurs.</p>
+      </div>
+      <form id="reviewForm" class="review-form">
+        <div class="fields-row">
+          <input type="text" id="name" placeholder="Votre nom" required autocomplete="name" />
+          <select id="rating" required>
+            <option value="" disabled selected>Note</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="1">⭐</option>
+          </select>
+        </div>
+        <textarea id="comment" placeholder="Votre commentaire..." required></textarea>
+        <button type="submit">Envoyer l'avis</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Jahriso Voyages - Merci à tous nos voyageurs.</p>
+  </footer>
+
+  <script>
+    const defaultReviews = [
+      {
+        name: 'Sarah L.',
+        rating: 5,
+        comment: 'Service 5 étoiles ! Mon séjour en famille aux Maldives était parfait, tout était organisé au millimètre.'
+      },
+      {
+        name: 'Lucas M.',
+        rating: 4,
+        comment: 'J’ai économisé 40% sur un city break à Paris, l’accueil était exceptionnel et les activités très bien choisies.'
+      },
+      {
+        name: 'Nina R.',
+        rating: 5,
+        comment: 'La croisière en Méditerranée était magique et l’équipe nous a réservé des surprises VIP chaque jour.'
+      }
+    ];
+
+    const reviewsEl = document.getElementById('reviews');
+    const form = document.getElementById('reviewForm');
+
+    function renderReviews(reviews) {
+      reviewsEl.innerHTML = reviews
+        .map((review) => {
+          const stars = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
+          return `
+            <article class="review-card" tabindex="0" aria-label="Avis de ${review.name}">
+              <div class="review-header">
+                <h3>${review.name}</h3>
+                <span class="stars" aria-label="Note ${review.rating} sur 5">${stars}</span>
+              </div>
+              <p>${review.comment}</p>
+            </article>
+          `;
+        })
+        .join('');
+    }
+
+    function getStoredReviews() {
+      const saved = localStorage.getItem('jahriso-reviews');
+      return saved ? JSON.parse(saved) : defaultReviews;
+    }
+
+    function storeReviews(reviews) {
+      localStorage.setItem('jahriso-reviews', JSON.stringify(reviews));
+    }
+
+    let reviews = getStoredReviews();
+    renderReviews(reviews);
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const rating = Number(document.getElementById('rating').value);
+      const comment = document.getElementById('comment').value.trim();
+
+      if (!name || !comment || !rating) {
+        alert('Veuillez renseigner votre nom, une note et un commentaire.');
+        return;
+      }
+
+      const newReview = {
+        name,
+        rating,
+        comment
+      };
+
+      reviews = [newReview, ...reviews];
+      renderReviews(reviews);
+      storeReviews(reviews);
+
+      form.reset();
+      document.getElementById('rating').value = '';
+    });
+  </script>
+</body>
+</html>
